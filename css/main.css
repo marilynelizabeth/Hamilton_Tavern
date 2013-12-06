@@ -9,19 +9,25 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
+.site-content{text-align: center}
 html,
 button,
 input,
 select,
 textarea {
-    color: #222;
+	
+    color: #e6e6e6;
 }
+
 
 html {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.4   
+    
 }
+ 
+
+
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -30,12 +36,12 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #b3d4fd;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #3d2f0c;
     text-shadow: none;
 }
 
@@ -44,7 +50,7 @@ html {
  */
 
 hr {
-    display: block;
+    display: dotted;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
@@ -97,13 +103,139 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   html {
+	    background: url('../img/untitled-1.png') center center no-repeat;
+	    background-size: cover;
+		-webkit-background-size: cover;
+	    -moz-background-size: cover;
+		font-family:'Radley', serif; 
+   }
 
+   .site-wrapper {
+   		width: 760px;
+	   margin: 0 auto;
+	   border: 5px solid #fff;
+	   background:#e7e3dd url(../img/content_texture.png) left top repeat
+   }
+   
+   .brand {
+	   margin: 5px;
+   }
+   
+   .site-header {
+	   width: 80%;
+	   margin: 0 auto;
+	   background: url(../img/Dashed_Rule.png) left bottom repeat-x;
+	   padding-bottom: 20px;
+   }
+   
+   
+   
+   .page-nav {
+   	margin: 0;
+	  padding: 0;
+	  text-align: center; 
+	  border-bottom: 2px solid #8b8a88;
+   }
+   
+   .page-nav li {
+    display: inline-block;
+    color:gray;
+    margin-left: 23px;
+	font-size: 20px;
+	padding-left: 46px;
+	background: url(../img/Stars.png) left center no-repeat;
 
+   }
 
+   .page-nav li:first-child{
+		margin-left: 0;
+		padding-left: 0;
+		padding-bottom: 20px;
+		background-image:none;
+   }
+   
+   .page-nav li a{
+	   color: #59543f;
+	   text-decoration: none;
+	   margin-top: 60px;
+	   
+	   
+   }
+   
+   .page-nav li a:hover {
+	   color: #bd6314;
+   }
+   
+    {
+	margin: 0;
+	  padding: 0;
+	  text-align: center; 
+	  border-bottom: 2px solid #8b8a88;
+   }
+   
+   .zig-zag {
+	   border: none;
+	   height: 28px;
+	   background: url(../img/Zig_Zag.png) left top repeat-x;
+	   width: 100%;
+	   margin-bottom: 0px;
+   }
+   
+   .dotted {
+	   width: 80%;
+	   margin: 0 auto;
+	   background: url(../img/Dashed_Rule.png) left bottom repeat-x;
+	   padding-bottom: 20px;
+   }
+   
+   .facebook {
+	   margin-left: 550px;
+	   margin-bottom: 30px;
+	   padding: 0;
+   }
+ 
+   .days {
+	   background: #5f5334;
+	   
+   }
+   
+   .info {
+	   color: #bcb59e;
+	  
+   }
+   
+   #location {
+	   background: #ae5a15;
+	   padding: 10px;
+	   margin-top: 0px;
+   }
+   
+   
+   .menu-nav li {
+	   display: inline;
+	   background-color: #75a49e;
+	   padding: 20px; 
+	   word-spacing: 5px;
+	   
+	   
+	    
+   }
+   
+   .menu-nav li a{
+	   color: rgba(255,255,255,0.77);
+	   text-decoration: none;
+   }
+   
+   #menu {
+	   color: #4c4c4c
+   }
+   
 
-
-
-
+   .menu-item-desc strong {
+	   
+   }
+   
 
 
 
