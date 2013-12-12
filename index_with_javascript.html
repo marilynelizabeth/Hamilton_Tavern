@@ -19,7 +19,7 @@
   <link href="css/jquery-ui-1.10.3.custom.min.css" rel="stylesheet">
   <link href="css/flexslider.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 	<div class="facebook">
 		<a href="https://www.facebook.com/pages/Hamilton-Tavern/48972018757"><img src="img/Facebook.png"></a>
 	</div>
-	
+
 	<div class="twitter">
 		<a href="https://twitter.com/HamiltonTavern"><img src="img/twitter.png"></a>
 	</div>
@@ -59,19 +59,19 @@
         </li>
       </ul>
     </div> <!-- end .site-header -->
-    
+
 
     <div class="site-content">
       <img align="center" alt="Logo" src="img/Untitled-3.png">
-   
 
-   
+
+
 	  <hr class="dotted">
 
 	  <hr class="line">
-	  
+
 	  <hr class="zig-zag">
-	
+
       <div class="section" id="location">
         <table width="100%">
           <tbody>
@@ -109,56 +109,56 @@
           </tbody>
         </table><!--End Location & Hours Area-->
       </div> <!-- /.section#location -->
-      
+
       <div class="section" id="menu">
       	<ul class="nav menu-nav">
 	        <li>
 	          <a href="#munchies">MUNCHIES</a>
 	        </li>
-	
+
 	        <li>
 	          <a href="#salads">SALADS</a>
 	        </li>
-	
+
 	        <li>
 	          <a href="#sandwiches">SANDWICHES</a>
 	        </li>
-	
+
 	        <li>
 	          <a href="#hot-plates">HOT PLATES</a>
 	        </li>
 	     </ul>
-	     
+
 	     <div class="menu-section" id="munchies">
 	     	Munchies
 	     </div>
 		 <div class="menu-section" id="salads">
 	     	<h2>Salads</h2>
-	     	<div id="slides" class="menu-items">
-			 	<div class="menu-item-slides">
-			 	
-			 		<div class="menu-item">
-					 	<img src="http://placekitten.com/500/500" alt="">
-			            <div class="menu-item-text">
-			            	<h3>Battered O's $8</h3>
-							<p class="menu-item-desc">with spicy garlic sauce<br><strong>Special Text</strong></p>
-			            </div>
-					</div> <!-- end menu item -->
-					
-				 	<div class="menu-item">
-					 	<img src="http://placekitten.com/500/500" alt="">
-			            <div class="menu-item-text">
-			            	<h3>Fried Dill Pickle Chips $6</h3>
-					          <div class="menu-item-desc">
-					            with zippy goat cheese sauce
-					          </div>
-			            </div>
-					</div> <!-- end menu item -->
-					
-			 	</div> <!-- /.menu-item-slides -->
+	     	<div class="menu-items slider">
+				 	<div class="menu-item-slides">
+
+				 		<div class="menu-item">
+						 	<img src="http://placekitten.com/500/500" alt="">
+				            <div class="menu-item-text">
+				            	<h3>Battered O's $8</h3>
+								<p class="menu-item-desc">with spicy garlic sauce<br><strong>Special Text</strong></p>
+				            </div>
+						</div> <!-- end menu item -->
+
+					 	<div class="menu-item">
+						 	<img src="http://placekitten.com/500/500" alt="">
+				            <div class="menu-item-text">
+				            	<h3>Fried Dill Pickle Chips $6</h3>
+						          <div class="menu-item-desc">
+						            with zippy goat cheese sauce
+						          </div>
+				            </div>
+						</div> <!-- end menu item -->
+
+				 	</div> <!-- /.menu-item-slides -->
 	     	</div> <!-- /.menu-items -->
-	     	
-	     	<div id="carousel" class="menu-items-nav">
+
+	     	<div class="menu-items-nav carousel">
 	     		<ul class="menu-items-controls">
 					<li><img src="http://placekitten.com/100/100" alt=""></li>
 					<li><img src="http://placekitten.com/100/100" alt=""></li>
@@ -168,9 +168,8 @@
 	     </div> <!-- /.menu-section -->
 		 <div class="menu-section" id="sandwiches">
 	     	<h2>Sandwiches<h2/>
-	     	 <div id="slides" class="menu-items">
+	     	 <div class="menu-items slider">
 			 	<div class="menu-item-slides">
-			 	
 			 		<div class="menu-item">
 					 	<img src="img/taco_burger.jpg" alt="Taco Burger" 												height="320" width="260">
 			           		 <div class="menu-item-text">
@@ -178,46 +177,65 @@
 							<p class="menu-item-desc">with spicy garlic sauce<br><strong>Tonight's Special</									strong></p>
 			            </div>
 					</div>
-					
-					<div id="carousel" class="menu-items-nav">
+
+					<div class="menu-items-nav carousel">
 	     		<ul class="menu-items-controls">
 					<li><img src="img/taco_burger.jpg" alt="" height="100" width="100"></li>
 				</ul>
 	     	</div>
-	    
+
 		 <div class="menu-section" id="hot-plates">
 	     	Hot Plates
 	     </div>
       </div> <!-- /.section#menu -->
-      
+
 	  <div class="site-footer"></div><!-- End Site Footer -->
     </div> <!-- /.site-content -->
   </div> <!-- /.site-wrapper -->
-            
+
       <script src="js/jquery-1.9.1.js"></script>
       <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
       <script src="js/jquery.flexslider-min.js"></script>
       <script>
-      	$('#menu').tabs();
-      	
-      	
-      	
-      	// Thumbnail controls
-      	$('#carousel').flexslider({
-	      selector: '.menu-items-controls > li',
-	      animationLoop: false,
-	      slideshow: false,
-	      asNavFor: '#slides'	
+      	function activateSlides(target) {
+      		var $target = $(target),
+      				$slider = $target.find('.slider'),
+      				$nav = $target.find('.carousel');
+
+      		$slider.flexslider({
+      			selector: '.menu-item-slides > .menu-item',
+      			animationLoop: false,
+      			slideshow: false,
+      			sync: $nav
+      		});
+
+      		$nav.flexslider({
+      			selector: '.menu-items-controls > li',
+      			animationLoop: false,
+      			slideshow: false,
+      			asNavFor: $slider
+      		});
+
+      	}
+
+      	// This checks for jQuery and
+      	// starts the javascript
+      	jQuery(function ($) {
+      		$('#menu').tabs({
+      			activate: function (event, ui) {
+      				// activate ui shows old and new tab/panel,
+      				// so we use ui.newPanel
+      				activateSlides(ui.newPanel);
+      			},
+      			create: function (event, ui) {
+      				// Create function only shows the first panel,
+      				// and is accessed using ui.panel
+      				activateSlides(ui.panel);
+      			}
+      		});
       	});
-      	
-      	$('#slides').flexslider({
-	      selector: '.menu-item-slides > .menu-item',
-	      animationLoop: false,
-	      slideshow: false,
-	      sync: "#carousel"	
-      	});
-      	
-      </script>      
+
+      </script>
 
 </body>
 </html>
