@@ -141,8 +141,8 @@ textarea {
    .page-nav li {
     display: inline-block;
     color:gray;
-    margin-left: 23px;
-	font-size: 20px;
+    margin-left: 30px;
+	font-size: 25px;
 	padding-left: 46px;
 	background: url(../img/Stars.png) left center no-repeat;
 
@@ -189,20 +189,58 @@ textarea {
 	   padding-bottom: 20px;
    }
    
-   .facebook {
-	   margin-left: 550px;
+     .twitter {
+	   margin-left: 580px;
 	   margin-bottom: 30px;
+	   margin-top: 0;
 	   padding: 0;
+	   
+	      }
+   
+   .facebook {
+	   margin-left: 540px;
+	   margin-bottom: 0;
+	   padding: 0;
+	   position: absolute;
    }
+   
+ 
  
    .days {
+	   margin-top: 60px;
+	   font-size: 13px;
 	   background: #5f5334;
+	   padding: 5px;
+	   margin: 0;
+	   
 	   
    }
+   
+   .days2 {
+	   margin-top: 60px;
+	   font-size: 13px;
+	   background: #5f5334;
+	   padding: 5px;
+	   
+   }
+
    
    .info {
 	   color: #bcb59e;
 	  
+   }
+   
+   .map a{
+	   color:rgba(226,226,226,1);
+	   text-decoration: none;
+	   margin-top: 60px;
+	   font-size: 13px;
+	   background: #5f5334;
+	   padding: 5px;
+   }
+   
+  .map a:hover {
+	   color: #534307;
    }
    
    #location {
@@ -214,9 +252,10 @@ textarea {
    
    .menu-nav li {
 	   display: inline;
-	   background-color: #75a49e;
+	   background-color: #73a392;
 	   padding: 20px; 
 	   word-spacing: 5px;
+	   
 	   
 	   
 	    
@@ -225,6 +264,7 @@ textarea {
    .menu-nav li a{
 	   color: rgba(255,255,255,0.77);
 	   text-decoration: none;
+	   
    }
    
    #menu {
